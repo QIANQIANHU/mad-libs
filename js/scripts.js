@@ -1,12 +1,19 @@
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
-    
+    event.preventDefault();
     var blanks = ["adjective1", "verb1", "verb2", "person1", "fruit", "season", "person2", "noun1", "person3", "noun2", "place", "person4", "person5", "verb3", "color", "adjective2"];
     blanks.forEach(function (blank) {
       var userInput = $("input#" + blank).val();
       $("." + blank).text(userInput);
 
     });
+    // var numbers = [1,2,3,4,5];
+    //
+    // var doubledNumbers = numbers.map(function(number) {
+    //   return number * 2;
+    // });
+    //
+    // alert(doubledNumbers);
 
     // var adjective1Input = $("input#adjective1").val();
     // var verb1Input = $("input#verb1").val();
